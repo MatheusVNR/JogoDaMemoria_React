@@ -24,7 +24,6 @@ const Card: React.FC<CardProps> = ({ card, onClick }) => {
           {card.value}
         </div>
         <div className="card-back">
-          {/* Aqui você pode usar um ícone, imagem ou um caractere padrão */}
           ?
         </div>
       </motion.div>

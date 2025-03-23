@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card from './components/Card';
+import confetti from 'canvas-confetti';
 import './App.css';
 
 type CardType = {
@@ -115,6 +116,11 @@ const App: React.FC = () => {
   useEffect(() => {
     if (cards.length && cards.every(card => card.isMatched)) {
       setGameFinished(true);
+      confetti({
+        particleCount: 150,
+        spread: 80,
+        origin: { y: 0.6 }
+      });
     }
   }, [cards]);
 
